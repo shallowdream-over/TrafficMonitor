@@ -1,4 +1,4 @@
-Aname: Release CI
+name: Release CI
 on: push
 jobs:
   x64_build:
