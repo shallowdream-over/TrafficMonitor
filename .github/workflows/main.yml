@@ -67,7 +67,7 @@ jobs:
         name: x86_${{ steps.current-time.outputs.formattedTime }}_pdb
         path: Bin/Release/*.pdb
 
-  arm64_build:
+  arm_build:
     runs-on: windows-latest
 
     steps:
@@ -77,7 +77,7 @@ jobs:
       uses: microsoft/setup-msbuild@v1
       
     - name: Run msbuild
-      run: msbuild -p:configuration=release -p:platform=arm64 -p:platformToolset=v142
+      run: msbuild -p:configuration=release -p:platform=arm -p:platformToolset=v142
       
     - name: Get current time
       uses: 1466587594/current-time@v1
